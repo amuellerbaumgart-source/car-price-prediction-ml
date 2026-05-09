@@ -1,10 +1,10 @@
-# 🚗 Car Price Prediction using Machine Learning
+# Car Price Prediction using Machine Learning
 
 This project focuses on predicting the resale prices of second-hand cars using machine learning. We used a dataset with over 10,000 entries containing car features such as make, model, year, mileage, and more. By applying and comparing different regression models, we were able to generate insights to help inform pricing strategies and evaluate business profitability.
 
 ---
 
-## 📈 Key Highlights
+## Key Highlights
 
 - Processed 10,000+ car listings using `Pandas` and `NumPy`
 - Applied ML models including `XGBoost`, `LightGBM`, and `Random Forest`
@@ -15,7 +15,7 @@ This project focuses on predicting the resale prices of second-hand cars using m
 
 ---
 
-## 🛠️ Technologies and Tools
+## Technologies and Tools
 
 - Python
 - Pandas, NumPy
