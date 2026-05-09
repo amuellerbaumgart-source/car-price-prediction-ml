@@ -1,0 +1,25 @@
+# Install: pip install pre-commit && pre-commit install
+# Run all hooks once: pre-commit run --all-files
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+        args: ["--maxkb=8000"]
+
+  - repo: local
+    hooks:
+      - id: train-tiny-fixture
+        name: train (tiny fixture)
+        language: system
+        pass_filenames: false
+        entry: python -m car_pricing.train --data tests/fixtures/tiny_car_prices.csv --out .pre-commit-train-out --n-estimators 40 --max-depth 4
+      - id: pytest
+        name: pytest
+        language: system
+        pass_filenames: false
+        entry: pytest tests/

@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: |
+            requirements.txt
+            requirements-dev.txt
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt -r requirements-dev.txt
+
+      - name: Train (CLI smoke, tiny fixture)
+        run: |
+          python -m car_pricing.train \
+            --data tests/fixtures/tiny_car_prices.csv \
+            --out artifacts_ci \
+            --n-estimators 50 \
+            --max-depth 4
+
+      - name: Pytest
+        run: pytest tests/
+
+      - name: Pre-commit (mirrors local hooks)
+        run: pre-commit run --all-files

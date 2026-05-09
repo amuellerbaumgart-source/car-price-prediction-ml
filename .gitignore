@@ -1,0 +1,16 @@
+.DS_Store
+.idea/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# Trained pipelines and local outputs (regenerate via training)
+artifacts/
+.pre-commit-train-out/
+artifacts_ci/
+*.joblib
