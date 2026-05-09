@@ -92,4 +92,3 @@ pre-commit run --all-files   # trains on tests/fixtures/tiny_car_prices.csv, the
 ```
 
 On push/PR to **`main`** or **`master`**, [`.github/workflows/ci.yml`](.github/workflows/ci.yml) installs dependencies, runs a **tiny CSV train**, **`pytest tests/`**, and **`pre-commit run --all-files`** so CI matches local hooks.
-
