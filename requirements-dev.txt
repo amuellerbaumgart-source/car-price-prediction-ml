@@ -2,5 +2,8 @@
 pytest>=8.0.0,<9
 pytest-cov>=4.1.0,<7
 
+# Required by FastAPI/Starlette TestClient (tests/test_api.py)
+httpx>=0.26.0,<1
+
 # Mirrors main optional workflow (see README): only needed locally if hooks run `pre-commit`.
 pre-commit>=3.7.0,<5
