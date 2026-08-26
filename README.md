@@ -1,6 +1,7 @@
 # Car Price Prediction using Machine Learning
 
-This project focuses on predicting the resale prices of second-hand cars using machine learning. We used a dataset with over 10,000 entries containing car features such as make, model, year, mileage, and more. By applying and comparing different regression models, we were able to generate insights to help inform pricing strategies and evaluate business profitability.
+This project focuses on predicting the resale prices of second-hand cars using machine learning. I used a dataset with over 10,000 entries containing car features such as make, model, year, mileage, and more. By applying and comparing different regression models, I was able to generate insights to help inform pricing strategies and evaluate business profitability.
+The original motivation came from feeling like I was getting ripped off by car dealerships so I decided to predict my own price and found that car dealership prices are slightly overpriced (makes sense..)
 
 ---
 
